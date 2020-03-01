@@ -4,7 +4,15 @@
   "version": "1.0.0",
   "author": "Code Cookbook",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:assets": "APP_ENV=development webpack --mode production --watch",
+    "dev:site": "APP_ENV=development eleventy --serve",
+    "build": "run-s clean build:assets build:site",
+    "build:assets": "webpack --mode production",
+    "build:site": "eleventy",
+    "clean": "rm -rf ./dist"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@babel/core": "^7.8.6",
