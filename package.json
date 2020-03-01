@@ -1,0 +1,8 @@
+{
+  "name": "eleventy-webpack-tailwind",
+  "description": "Eleventy project with Webpack and Tailwind CSS",
+  "version": "1.0.0",
+  "author": "Code Cookbook",
+  "license": "MIT",
+  "scripts": {}
+}
