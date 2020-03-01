@@ -1,4 +1,7 @@
 module.exports = function(eleventyConfig) {
+  // Add layout alias
+  eleventyConfig.addLayoutAlias("base", "base.njk");
+
   // Copy static files directly to output.
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
 
