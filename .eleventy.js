@@ -1,4 +1,7 @@
 module.exports = function(eleventyConfig) {
+  // Copy static files directly to output.
+  eleventyConfig.addPassthroughCopy({ "src/static": "/" });
+
   return {
     dir: {
       input: 'src',
@@ -6,6 +9,7 @@ module.exports = function(eleventyConfig) {
       includes: 'includes',
       layouts: 'layouts',
       data: 'data',
-    }
+    },
+    passthroughFileCopy: true
   };
 };
