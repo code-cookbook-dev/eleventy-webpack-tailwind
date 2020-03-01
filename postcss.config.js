@@ -10,11 +10,15 @@ const plugins = [
 
 if (!isDev) {
   const purgecss = require('@fullhuman/postcss-purgecss');
+  const cssnano = require('cssnano');
 
   [].push.apply(plugins, [
     purgecss({
       content: ['src/**/*.njk', 'src/**/*.md', 'src/**/*.js'],
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+    }),
+    cssnano({
+      preset: 'default',
     }),
   ]);
 }
